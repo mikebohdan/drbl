@@ -1,8 +1,7 @@
 (ns drbl.core
   (:require [clj-http.client :as http]
             [clojure.data.json :as json])
-  (:use [slingshot.slingshot :only [try+]])
-  (:gen-class))
+  (:use [slingshot.slingshot :only [try+]]))
 
 (def auth-token "")
 
@@ -75,8 +74,3 @@
        (frequencies)
        (sort-by second)
        (take 10)))
-
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
